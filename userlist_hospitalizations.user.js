@@ -22,9 +22,7 @@
         if (isHospitalized) {
             let hospitalReason = isHospitalized.title.split('<br>')[1];
 
-            if (hospitalReason.includes('Hospitalized by')) {
-                console.log(hospitalReason);
-            } else {
+            if (!hospitalReason.includes('Hospitalized by')) {
                 user.style = 'display:none;';
             }
         }
